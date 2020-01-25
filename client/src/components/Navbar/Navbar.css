@@ -1,0 +1,18 @@
+.Navbar {
+    background-color: CadetBlue;
+    font-family: 'Impact', Charcoal, sans-serif;
+    padding: 20px;
+    height: 30px;
+
+}
+
+.Navbar .links{
+    font-size: 18px;
+    color: navy;
+    float: right;
+}
+
+.Navbar .title{
+    font-size: 30px;
+    color: black;
+}

@@ -1,9 +1,10 @@
 import * as React from 'react';
+import Navbar from '../components/Navbar/Navbar';
 
 
 function Home(){
     return(
-        <div>ConUHacks</div>
+        <Navbar title='VolunTrex'/>
     );
 }
 
