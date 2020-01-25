@@ -18,7 +18,7 @@ const Navbar = (props)=>{
 						{title}
 			</RBNavbar.Text>
 
-            <RBNav.Link href="/" className='links'>Components</RBNav.Link>
+            <RBNav.Link href="/" className='links'>logout</RBNav.Link>
 
         </RBNavbar>
     );
