@@ -28,6 +28,7 @@ function Association(){
                 body: JSON.stringify({
                     query: `{
                         allAssociations{
+                            association_id,
                             association_name,
                             description
                         }

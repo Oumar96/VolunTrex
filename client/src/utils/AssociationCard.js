@@ -4,6 +4,8 @@ import { Card, CardBody, Divider, JobCardBody } from '../components/Card/Card';
 import { Row, Col, Card as RBCard } from 'react-bootstrap/';
 import { Button, ButtonToolbar} from 'reactstrap';
 import {CardImg} from 'reactstrap';
+import { Link } from 'react-router-dom';
+var event = "";
 
 
 
@@ -47,10 +49,18 @@ const  AssociationCard =(props)=>{
                     >
                         <Row className="justify-content-center"
 					        style={{ padding: '0px 0px' }}>
+                                {/* <Link type="submit"
+                                    className="tablinks"
+                                    to={`/Association?clickedCard=${Object[i].association_id}&attribute=Home`}>Home</Link>
+                                <Link type="submit"
+                                    className="tablinks"
+                                    to={`/Association?clickedCard=${Object[i].association_id}&attribute=Description`}>Description</Link>
+                                 <Link type="submit"
+                                    className="tablinks"
+                                    to={`/Association?clickedCard=${Object[i].association_id}&attribute=Projects`}>Projects</Link> */}
                                 <button
 						            type="button"
                                     className="tablinks"
-
 					                >Association
 					            </button>
                                 <button
@@ -101,7 +111,7 @@ const ProjectsCards = (Object)=>{
         items.push(
                 <Card
                     className="scrolling-card"
-                    style={{ maxWidth: '400px', maxHeight: '400px', display: 'inline-block' , marginLeft: '40px', marginBottom: '60px'}}
+                    style={{ maxWidth: '350px', maxHeight: '450px', display: 'inline-block' , marginLeft: '40px', marginBottom: '60px'}}
                     >
                     <Col xs="10">
                     <CardBody
@@ -127,13 +137,15 @@ const ProjectsCards = (Object)=>{
 						            className="tablinks"
 					                >Projects
 					            </button>
-                                <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
-                                <p style={{textAlign: 'center'}}>{Object[i].description}</p>
+                                <CardImg top width="100%" src={Object[i].picture}/>
+                        <p style={{textAlign: 'center'}}>{Object[i].description}</p>
+                        <p style={{textAlign: 'center'}}>Type: {Object[i].activity_types}</p>
 
 
                                     <Button
                                     type="button"
-                                    className="buttonAccept">
+                                    className="buttonAccept"
+                                    >
                                         Approve
                                     </Button>
                                     <Button
@@ -156,4 +168,28 @@ const ProjectsCards = (Object)=>{
         </div>);
 };
 
-export {AssociationCard, ProjectsCards};
+function addEvent(){
+        async function fetchData() {
+            await fetch('http://localhost:4000/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `{
+                        myAssociations(user_id:"1"){
+                            association_name,
+                            description
+                        }
+                        volunteers(user_id:"1"){
+                            event_id,
+                            event_name,
+                            description,
+                            total_volunteers,
+                            activity_types
+                          }
+                    }`
+                })
+            });
+        }
+}
+
+export {AssociationCard,ProjectsCards};
