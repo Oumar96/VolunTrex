@@ -32,46 +32,14 @@ function Home(){
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                {cardsNew.map(i => (
-                    <Card
-                      className="scrolling-card"
-                      style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px'}}
-                     >
-                     <Col xs="4">
-                    <CardBody
-                      className="scrolling-card"
-                      style={{ paddingTop: '10px' }}
-                      >
-                      <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
-                      <p>Testing</p>
-                    </CardBody>
-                    </Col>
-                    </Card>
-                ))}
+                    {cardsProject}
                 </Row>
                 <Subtitle text="Projects" />
                 <Row
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                {cardsNew.map(i => (
-                    <Card
-                      className="scrolling-card"
-                      style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px'}}
-                      display = {{}}
-                     >
-                     <Col xs="4">
-                    <CardBody
-                      className="scrolling-card"
-                      style={{ paddingTop: '10px' }}
-                      >
-                      <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
-                      <p>Testing</p>
-                    </CardBody>
-                    </Col>
-                    </Card>
-                ))}
-                    {/* {cardsProject} */}
+                    {cardsProject}
                 </Row>
 
             <Footer/>

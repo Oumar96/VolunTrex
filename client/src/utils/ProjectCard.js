@@ -9,20 +9,20 @@ function cards(Object){
 	var items = [];
     while(i<5){
         items.push(
-            <Col xs="10" sm="4">
-                <Card
-                    className="scrolling-card"
-                    style={{ maxWidth: '250px', maxHeight: '250px' }}
-                    >
+            <Card
+                className="scrolling-card"
+                style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px', marginBottom: '40px'}}
+                >
+                <Col xs="10">
                     <CardBody
+                        title="CGI"
                         className="scrolling-card"
-                        style={{ paddingTop: '10px' }}
+                        style={{ paddingTop: '10px', textAlign: 'Center'}}
                     >
                         <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
-                        <p>Testing</p>
                     </CardBody>
-                </Card>
-            </Col>
+                </Col>
+            </Card>
         );
         i++;
     }
