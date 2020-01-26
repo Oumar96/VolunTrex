@@ -10,11 +10,11 @@ function AssociationCard(Object){
 	var items = [];
     while(i<5){
         items.push(
-            <Col xs="10" sm="4">
                 <Card
                     className="scrolling-card"
-                    style={{ maxWidth: '300px', maxHeight: '350px' }}
+                    style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px', marginBottom: '40px'}}
                     >
+                    <Col xs="10">
                     <CardBody
                         className="scrolling-card"
                         style={{ paddingTop: '10px' }}
@@ -37,11 +37,11 @@ function AssociationCard(Object){
 						            className="tablinks"
 					                >Projects
 					            </button>
-                </Row>
-
+                        </Row>
+                        <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
                     </CardBody>
+                    </Col>
                 </Card>
-            </Col>
         );
         i++;
     }
