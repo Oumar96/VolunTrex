@@ -31,4 +31,22 @@ var myAssociations = {
     }
 }
 
-module.exports = myAssociations
+var allAssociations = {
+    type: graphql.GraphQLList(Association),
+    resolve: (root, args, context, info) => {
+        return new Promise((resolve, reject) => {
+            query = `SELECT * FROM associations`
+            logger.info(__filename + " Trying to query: "+query)
+            db.all(query, function(err, rows) {
+                if(err){
+                    logger.error(__filename +" "+err)
+                    reject(err);
+                }
+                logger.info(__filename + query +"successfully queried")
+                resolve(rows);
+            });
+        });
+    }
+}
+
+module.exports = {myAssociations,allAssociations}

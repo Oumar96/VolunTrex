@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const {events,eventsAssociation} = require('./events')
 const volunteers = require('./volunteers')
-const myAssociations = require('./associations')
+const {myAssociations,allAssociations} = require('./associations')
 const myAvailabilities = require('./availabilities')
 const logger = require('../logger/logger.js')
 
@@ -14,7 +14,8 @@ var queryType = new graphql.GraphQLObjectType({
         eventsAssociation,
         volunteers,
         myAssociations,
-        myAvailabilities
+        myAvailabilities,
+        allAssociations
     }
 });
 
