@@ -10,16 +10,18 @@ import Subtitle from '../components/Subtitle/Subtitle';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
-import cards from '../utils/tools';
+import cards from '../utils/AssociationCard';
 
 import '../App.css';
+import AssociationCard from '../utils/AssociationCard';
+import ProjectCard from '../utils/ProjectCard';
 
 
 
 function Home(){
     const cardsNew = ["Hi", "sdfsdf","sdfsd","dsfsdf"];
-    const cardsComponents = cards(cardsNew);
-    console.log(cardsComponents);
+    const cardsAssociation = AssociationCard(cardsNew);
+    const cardsProject = ProjectCard(cardsNew);
     return(
         <div>
             <Header/>
@@ -29,7 +31,7 @@ function Home(){
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                    {cardsComponents}
+                    {cardsAssociation}
                 </Row>
                 <p><Nav.Link href='/Association'>I volunteer</Nav.Link></p>
                 <Subtitle text="Projects" />
@@ -37,7 +39,7 @@ function Home(){
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                    {cardsComponents}
+                    {cardsProject}
                 </Row>
                 <p><Nav.Link href='/Project'>I volunteer</Nav.Link></p>
 
