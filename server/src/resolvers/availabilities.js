@@ -1,4 +1,4 @@
-const Association = require('../classes/availabilitie')
+const Availability = require('../classes/availabilitie')
 const graphql = require('graphql');
 const database = require("../database/database");
 const logger = require('../logger/logger')
