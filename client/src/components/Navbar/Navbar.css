@@ -1,0 +1,19 @@
+.Navbar {
+    background-color: CadetBlue;
+    padding: 20px;
+    height: 450px;
+
+}
+
+.Navbar .links{
+    font-size: 18px;
+    color: aliceblue;
+    float: right;
+    text-decoration: none;
+}
+
+.Navbar .title{
+    font-family: 'Impact', Charcoal, sans-serif;
+    font-size: 30px;
+    color: black;
+}

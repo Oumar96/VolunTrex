@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+.AppHeader {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('pictures/header.gif');
+	background-size: cover;
+	width: 100%;
+	background-position: center center;
+	height: 250px !important;
+	z-index: 1;
+	position: relative;
+}
+.AppHeader .subtitle {
+	text-align: center;
+	color: white;
+	font-size: 23px;
+	font-weight: 600;
+	display: block;
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.TSCard {
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.TScardBody {
+	text-align: left;
+}
+
+
+.cardImage{
+	border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 180px;
+    width: 100%;
+    display: block;
+}
+
+.cardHeader {
+	background-color: white;
+	color: rgb(134, 134, 146);
+	font-size: large;
+}
+
+.cardDivider {
+	color: rgb(134, 134, 146);
+}
+
+.tablinks {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px 10px;
+	transition: 0.3s;
+	font-size: 15px;
+	color: #FF9A8D;
+}
+
+.tablinks:hover {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px 10px;
+	transition: 0.3s;
+	font-size: 15px;
+	color: #FF1C00;
+}
+
+.tablinks:focus {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px 10px;
+	transition: 0.3s;
+	font-size: 15px;
+	color: #FF1C00;
+}
+
