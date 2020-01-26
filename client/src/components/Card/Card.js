@@ -3,19 +3,13 @@ import PropTypes from 'prop-types';
 import { Card as RBCard } from 'react-bootstrap';
 import './Card.css';
 
-
 const Card = (props) => {
 	const { header = '', footer = '', children, ...rest } = props;
 	return (
-		<RBCard style={{ width: '18rem' }}>
-		<RBCard.Img variant="top" className="cardImage" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg" />
-		<RBCard.Body>
-			<RBCard.Title>Card Title</RBCard.Title>
-			<RBCard.Text>
-			Some quick example text to build on the card title and make up the bulk of
-			the card's content.
-			</RBCard.Text>
-		</RBCard.Body>
+		<RBCard {...rest} className="TSCard">
+			{header && <RBCard.Header className="cardHeader">{header}</RBCard.Header>}
+			{children}
+			{footer && <RBCard.Footer className="text-muted">{footer}</RBCard.Footer>}
 		</RBCard>
 	);
 };
@@ -49,4 +43,4 @@ Card.propTypes = {
 	subtitle: PropTypes.string
 };
 
-export { Card, CardBody, Divider };
+export { Card, CardBody, Divider};
