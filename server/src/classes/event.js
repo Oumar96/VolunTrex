@@ -9,8 +9,10 @@ const Events = new graphql.GraphQLObjectType({
       association_id: { type: graphql.GraphQLString },
       total_volunteers: { type: graphql.GraphQLString },
       activity_types: { type: graphql.GraphQLString },
-      picture: { type: graphql.GraphQLString }
-
+      picture: { type: graphql.GraphQLString },
+      days: { type: graphql.GraphQLString },
+      start_time: { type: graphql.GraphQLString },
+      end_time: { type: graphql.GraphQLString }
     }
 });
 

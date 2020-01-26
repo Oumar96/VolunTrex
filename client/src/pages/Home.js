@@ -78,7 +78,12 @@ function Home(){
                     {cardsProject}
                 </Row>
 
-            <Footer/>
+            <Footer
+                challenge = "CGI Challenge"
+                contributor1 = "Line Ghanem"
+                contributor2 = "Steffan Venacious"
+                contributor3 = "Oumar Ba"
+            />
             </div>
         </div>
     );
