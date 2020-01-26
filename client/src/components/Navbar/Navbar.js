@@ -13,10 +13,10 @@ const Navbar = (props)=>{
 				variant="dark"
 				className="Navbar"
 		>
-            <RBNavbar.Text className="title">
-						{title}
-			</RBNavbar.Text>
-
+             <RBNav.Link className="title" href='/' style={{ textDecoration: "none"}}>
+                {title}
+            </RBNav.Link>
+            
             <RBNav.Link href="/" className='links'>logout</RBNav.Link>
         </RBNavbar>
     );

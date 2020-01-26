@@ -37,7 +37,7 @@ function AssociationCard(Object){
 						            className="tablinks"
 					                >Projects
 					            </button>
-                </Row>
+                        </Row>
 
                     </CardBody>
                 </Card>
