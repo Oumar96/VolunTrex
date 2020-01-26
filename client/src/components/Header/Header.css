@@ -5,8 +5,26 @@
 	background-size: cover;
 	width: 100%;
 	background-position: center center;
-	height: 250px !important;
+	height: 350px !important;
 	z-index: 1;
+	position: relative;
+}
+.AppHeader .title {
+	text-align: center;
+	padding-top: 10%;
+	color: white;
+	font-size: 40px;
+	font-weight: 750;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+.AppHeader .title3 {
+	text-align: center;
+	padding-top: 1%;
+	color: white;
+	font-size: 35px;
+	font-weight: 750;
+	font-family: 'Source Sans Pro', sans-serif;
 	position: relative;
 }
 .AppHeader .subtitle {
