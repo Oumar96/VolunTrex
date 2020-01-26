@@ -38,7 +38,8 @@ function Home(){
                             event_name,
                             description,
                             total_volunteers,
-                            activity_types
+                            activity_types,
+                            picture
                           }
                     }`
                 })
@@ -53,7 +54,6 @@ function Home(){
             fetchData();
         }, [associations]);
     
-    console.log(associations)
     const cardsAssociation = getAssociationCards(associations);
     const cardsProject = getProjectCards(projects);
     return(
