@@ -59,6 +59,8 @@ function Home(){
     return(
         <div>
             <Header
+                title = "Join the Community"
+                href='/Association'
             />
             <div className="background-section1">
                 <Subtitle text="Associations" />

@@ -8,23 +8,24 @@
 	height: 350px !important;
 	z-index: 1;
 	position: relative;
+	text-align: center;
 }
 .AppHeader .title {
 	text-align: center;
 	padding-top: 10%;
 	font-family: 'Impact', Charcoal, sans-serif;
 	font-size: 30px;
-	color: black;
+	color: white;
 	font-weight: 750;
 	position: relative;
 }
-.AppHeader .title3 {
+.AppHeader .title2 {
 	text-align: center;
-	padding-top: 1%;
+	padding-top: 10%;
+	font-family: 'Impact', Charcoal, sans-serif;
+	font-size: 30px;
 	color: white;
-	font-size: 35px;
 	font-weight: 750;
-	font-family: 'Source Sans Pro', sans-serif;
 	position: relative;
 }
 .AppHeader .subtitle {

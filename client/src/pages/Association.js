@@ -19,16 +19,17 @@ function Association(){
     const cardsAssociation = AssociationCard(cardsNew);
     return(
         <div>
-            <Navbar title="VolunTrex"/>
+            <Header
+                title2 = "Profile"
+                href='/'
+            />
             <div className="background-section1">
                 <Subtitle text="Associations" />
-                <p><Nav.Link href='/Association'>I volunteer</Nav.Link></p>
                 <Row
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
                    {cardsAssociation}
-                 
                 </Row>
                 <Subtitle text="Projects" />
                 <Row
