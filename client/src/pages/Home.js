@@ -8,13 +8,18 @@ import { Card, CardBody, Divider } from '../components/Card/Card';
 import { Row, Col, Card as RBCard } from 'react-bootstrap/';
 import {CardImg} from 'reactstrap';
 
-// import cards from '../utils/tools';
+import cards from '../utils/AssociationCard';
 
 import '../App.css';
+import AssociationCard from '../utils/AssociationCard';
+import ProjectCard from '../utils/ProjectCard';
 
 
 
 function Home(){
+    const cardsNew = ["Hi", "sdfsdf","sdfsd","dsfsdf"];
+    const cardsAssociation = AssociationCard(cardsNew);
+    const cardsProject = ProjectCard(cardsNew);
     return(
         <div>
             <Header
@@ -26,7 +31,7 @@ function Home(){
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                {[0,1,2,3,4].map(i => (
+                {cardsNew.map(i => (
                     <Card
                       className="scrolling-card"
                       style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' }}
@@ -50,7 +55,7 @@ function Home(){
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                {[0,1,2,3,4].map(i => (
+                {cardsNew.map(i => (
                     <Card
                       className="scrolling-card"
                       style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' }}
@@ -67,6 +72,7 @@ function Home(){
                     </Col>
                     </Card>
                 ))}
+                    {/* {cardsProject} */}
                 </Row>
                 <p><Nav.Link href='/Project'>I volunteer</Nav.Link></p>
 

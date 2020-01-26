@@ -3,6 +3,7 @@ import { Card, CardBody, Divider } from '../components/Card/Card';
 import { Row, Col, Card as RBCard } from 'react-bootstrap/';
 import {CardImg} from 'reactstrap';
 
+
 function cards(Object){
     var i = 0;
 	var items = [];
