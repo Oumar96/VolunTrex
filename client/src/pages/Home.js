@@ -34,7 +34,7 @@ function Home(){
                 {cardsNew.map(i => (
                     <Card
                       className="scrolling-card"
-                      style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' }}
+                      style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px'}}
                       display = {{}}
                      >
                      <Col xs="4">
@@ -49,7 +49,6 @@ function Home(){
                     </Card>
                 ))}
                 </Row>
-                <p><Nav.Link href='/Association'>I volunteer</Nav.Link></p>
                 <Subtitle text="Projects" />
                 <Row
                     className="justify-content-center"
@@ -58,7 +57,7 @@ function Home(){
                 {cardsNew.map(i => (
                     <Card
                       className="scrolling-card"
-                      style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' }}
+                      style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px'}}
                       display = {{}}
                      >
                      <Col xs="4">
@@ -74,7 +73,6 @@ function Home(){
                 ))}
                     {/* {cardsProject} */}
                 </Row>
-                <p><Nav.Link href='/Project'>I volunteer</Nav.Link></p>
 
             <Footer/>
             </div>
