@@ -1,0 +1,15 @@
+2020-01-26T04:53:14.144Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/database/database.js Attempting to connect to database
+2020-01-26T04:53:14.148Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/resolvers/queries.jsQuerying with GraphQL
+2020-01-26T04:53:14.162Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/database/database.js Connected to database
+2020-01-26T04:53:14.162Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/database/database.js Connected to database
+2020-01-26T04:53:14.163Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/database/database.js Connected to database
+2020-01-26T04:53:31.036Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/resolvers/associations.js Trying to query: SELECT * FROM associations WHERE association_id IN
+                    (SELECT association_id FROM events WHERE event_id IN
+                    (SELECT event_id FROM volunteering INNER JOIN users
+                        WHERE volunteering.user_id = '2'
+                        and users.user_id = '2'))
+2020-01-26T04:53:31.052Z [32minfo[39m: 	/Users/lineghanem/Desktop/VolunTrex/server/src/resolvers/associations.jsSELECT * FROM associations WHERE association_id IN
+                    (SELECT association_id FROM events WHERE event_id IN
+                    (SELECT event_id FROM volunteering INNER JOIN users
+                        WHERE volunteering.user_id = '2'
+                        and users.user_id = '2'))successfully queried
