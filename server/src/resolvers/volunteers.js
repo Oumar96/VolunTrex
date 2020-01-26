@@ -1,11 +1,11 @@
-const Volunteering = require('../classes/volunteering')
+const Events = require('../classes/event')
 const graphql = require('graphql');
 const database = require("../database/database");
 const logger = require('../logger/logger')
 const db = new database().db;
 
 var volunteers = {
-    type: graphql.GraphQLList(Volunteering),
+    type: graphql.GraphQLList(Events),
     args: {
         user_id: {
             type: new graphql.GraphQLNonNull(graphql.GraphQLString)
