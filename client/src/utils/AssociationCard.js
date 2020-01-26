@@ -7,11 +7,35 @@ import {CardImg} from 'reactstrap';
 import { Link } from 'react-router-dom';
 var event = "";
 
-function AssociationCard(Object){
 
+
+const  AssociationCard =(props)=>{
+
+
+        async function addVolunteering() {
+
+            await fetch('http://localhost:4000/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    mutation: `{
+                        addVolunteering(user_id:"1", event_id:"350") {
+                            user_id,
+                            event_id
+                        }
+                    }`
+                })
+            })
+                .then((res) => res.json())
+            };
+
+    const{
+        cardsAssociation
+    }=props;
+    const [responce,setResponce] = useState('accepted');
     var i = 0;
-	var items = [];
-    while(i<Object.length){
+    var items = [];
+    while(i<cardsAssociation.length){
         items.push(
                 <Card
                     className="scrolling-card"
@@ -19,7 +43,7 @@ function AssociationCard(Object){
                     >
                     <Col xs="10">
                     <CardBody
-                        title={Object[i].association_name}
+                        title={cardsAssociation[i].association_name}
                         className="scrolling-card"
                         style={{ paddingTop: '10px', textAlign: 'Center'}}
                     >
@@ -50,14 +74,16 @@ function AssociationCard(Object){
 					                >Projects
 					            </button>
                                 <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
-                                <p style={{textAlign: 'center'}}>{Object[i].description}</p>
+                                <p style={{textAlign: 'center'}}>{cardsAssociation[i].description}</p>
 
-                                    <Button 
+                                    <Button
                                     type="button"
-                                    className="buttonAccept">
-                                        Approve
+                                    className="buttonAccept"
+                                    onClick={()=>{addVolunteering();
+                                    setResponce("okey");}}>
+                                        {responce}
                                     </Button>
-                                    <Button 
+                                    <Button
                                     type="button"
                                     className="buttonDecline ">
                                         Decline
@@ -74,10 +100,10 @@ function AssociationCard(Object){
     return (
 		<div>
 			{items}
-        </div>)
-}
+        </div>);
+};
 
-function ProjectsCards(Object){
+const ProjectsCards = (Object)=>{
 
     var i = 0;
 	var items = [];
@@ -116,13 +142,13 @@ function ProjectsCards(Object){
                         <p style={{textAlign: 'center'}}>Type: {Object[i].activity_types}</p>
 
 
-                                    <Button 
+                                    <Button
                                     type="button"
                                     className="buttonAccept"
                                     >
                                         Approve
                                     </Button>
-                                    <Button 
+                                    <Button
                                     type="button"
                                     className="buttonDecline ">
                                         Decline
@@ -139,11 +165,8 @@ function ProjectsCards(Object){
     return (
 		<div>
 			{items}
-        </div>)
-}
-
-
-
+        </div>);
+};
 
 function addEvent(){
         async function fetchData() {

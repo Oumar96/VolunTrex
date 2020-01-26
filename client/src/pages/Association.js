@@ -56,8 +56,7 @@ function Association(){
             }
             fetchData();
         }, [allAssociations]);
-    
-    const cardsAssociation = AssociationCard(allAssociations);
+
     const cardsProjects = ProjectsCards(allProjects)
     return(
         <div>
@@ -71,7 +70,7 @@ function Association(){
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                   {cardsAssociation}
+                   <AssociationCard cardsAssociation={allAssociations}></AssociationCard>
                 </Row>
                 <Subtitle text="Projects" />
                 <Row
