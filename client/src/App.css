@@ -32,10 +32,6 @@
   background-color: rgb(125, 132, 119)
 }
 
-.background-section2 {
-  background-color: rgb(119, 127, 132);
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
