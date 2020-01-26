@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import {Nav} from 'react-bootstrap';
 import Subtitle from '../components/Subtitle/Subtitle';
@@ -12,27 +12,61 @@ import cards from '../utils/AssociationCard';
 
 import '../App.css';
 import AssociationCard from '../utils/AssociationCard';
-import ProjectCard from '../utils/ProjectCard';
+import {getAssociationCards,getProjectCards} from '../utils/ProjectCard';
 
 
 
 function Home(){
-    const cardsNew = ["Hi", "sdfsdf","sdfsd","dsfsdf"];
-    const cardsAssociation = AssociationCard(cardsNew);
-    const cardsProject = ProjectCard(cardsNew);
+    const [associations, setAssociations] = useState('Not available yet');
+    const [projects, setProjects] = useState('Not available yet');
+	const [isLoading, setIsLoading] = useState(false);
+    useEffect(() => {
+
+        async function fetchData() {
+            setIsLoading(true);
+            await fetch('http://localhost:4000/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    query: `{
+                        myAssociations(user_id:"1"){
+                            association_name,
+                            description
+                        }
+                        volunteers(user_id:"1"){
+                            event_id,
+                            event_name,
+                            description,
+                            total_volunteers,
+                            activity_types
+                          }
+                    }`
+                })
+            })
+                .then((res) => res.json())
+                .then((res) => {
+                    (res.data.myAssociations && res.data.myAssociations.length !== 0) && setAssociations(res.data.myAssociations);
+                    (res.data.volunteers && res.data.volunteers.length !== 0) && setProjects(res.data.volunteers);
+                    setIsLoading(false);
+                });
+            }
+            fetchData();
+        }, [associations]);
+    
+    console.log(associations)
+    const cardsAssociation = getAssociationCards(associations);
+    const cardsProject = getProjectCards(projects);
     return(
         <div>
             <Header
-              title='VolunTrex'
             />
             <div className="background-section1">
                 <Subtitle text="Associations" />
-                <p><Nav.Link href='/Association'>I volunteer</Nav.Link></p>
                 <Row
                     className="justify-content-center"
                     style={{ padding: '5px 25px' }}
                 >
-                    {cardsProject}
+                    {cardsAssociation}
                 </Row>
                 <Subtitle text="Projects" />
                 <Row
