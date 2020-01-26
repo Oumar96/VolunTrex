@@ -9,7 +9,7 @@ function AssociationCard(Object){
 
     var i = 0;
 	var items = [];
-    while(i<5){
+    while(i<Object.length){
         items.push(
                 <Card
                     className="scrolling-card"
@@ -17,6 +17,7 @@ function AssociationCard(Object){
                     >
                     <Col xs="10">
                     <CardBody
+                        title={Object[i].event_name}
                         className="scrolling-card"
                         style={{ paddingTop: '10px' }}
                     >
@@ -25,17 +26,19 @@ function AssociationCard(Object){
                                 <button
 						            type="button"
                                     className="tablinks"
-
+                                    onClick ={Object[i].association_name}
 					                >Association
 					            </button>
                                 <button
 						            type="button"
 						            className="tablinks"
+                                    onClick ={Object[i].description}
 					                >Description
 					            </button>
                                 <button
 						            type="button"
 						            className="tablinks"
+                                    onClick ={Object[i].picture}
 					                >Projects
 					            </button>
                                 <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
