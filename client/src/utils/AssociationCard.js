@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Card, CardBody, Divider } from '../components/Card/Card';
+import { Card, CardBody, Divider, JobCardBody } from '../components/Card/Card';
 import { Row, Col, Card as RBCard } from 'react-bootstrap/';
+import { Button, ButtonToolbar} from 'reactstrap';
 import {CardImg} from 'reactstrap';
 
 function AssociationCard(Object){
@@ -12,7 +13,7 @@ function AssociationCard(Object){
         items.push(
                 <Card
                     className="scrolling-card"
-                    style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px', marginBottom: '40px'}}
+                    style={{ maxWidth: '250px', maxHeight: '250px', display: 'inline-block' , marginLeft: '40px', marginBottom: '60px'}}
                     >
                     <Col xs="10">
                     <CardBody
@@ -37,8 +38,21 @@ function AssociationCard(Object){
 						            className="tablinks"
 					                >Projects
 					            </button>
+                                <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
+
+                                    <Button 
+                                    type="button"
+                                    className="buttonAccept">
+                                        Approve
+                                    </Button>
+                                    <Button 
+                                    type="button"
+                                    className="buttonDecline ">
+                                        Decline
+                                    </Button>
+
+
                         </Row>
-                        <CardImg top width="100%" src="https://dynomapper.com/images/Content_Audit_for_Website_Success.jpg"/>
                     </CardBody>
                     </Col>
                 </Card>
