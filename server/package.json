@@ -1,15 +1,33 @@
 {
-  "name": "y",
-  "version": "y",
+  "name": "server",
+  "version": "1.0.0",
   "description": "voluntrex server side",
-  "main": "index.js",
-  "author": "Madridistas",
-  "license": "y",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon src/index.js",
+    "start:ci": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oumar96/VolunTrex.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Oumar96/VolunTrex/issuess"
+  },
+  "homepage": "https://github.com/Oumar96/VolunTrex#readme",
   "dependencies": {
     "apollo-server": "^2.9.16",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
-    "graphql": "^14.5.8"
+    "graphql": "^14.5.8",
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1",
+    "winston": "^3.2.1",
+    "winston-daily-rotate": "^0.0.1",
+    "winston-daily-rotate-file": "^4.4.2"
   }
 }
