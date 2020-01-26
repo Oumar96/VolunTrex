@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+.AppHeader {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('pictures/header.gif');
+	background-size: cover;
+	width: 100%;
+	background-position: center center;
+	height: 400px !important;
+	z-index: 1;
+	position: relative;
+}
+.AppHeader .title {
+	text-align: center;
+	padding-top: 10%;
+	color: white;
+	font-size: 40px;
+	font-weight: 750;
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
+.AppHeader .title2 {
+	text-align: center;
+	padding-top: 1%;
+	color: white;
+	font-size: 35px;
+	font-weight: 750;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+.AppHeader .title3 {
+	text-align: center;
+	padding-top: 1%;
+	color: white;
+	font-size: 35px;
+	font-weight: 750;
+	font-family: 'Source Sans Pro', sans-serif;
+	position: relative;
+}
+.AppHeader .subtitle {
+	text-align: center;
+	color: white;
+	font-size: 23px;
+	font-weight: 600;
+	display: block;
+}
