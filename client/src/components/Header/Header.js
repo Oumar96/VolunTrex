@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
+import {Nav} from 'react-bootstrap';
 
 const Header = (props) => {
 	const {
@@ -12,12 +13,8 @@ const Header = (props) => {
 	} = props;
 	return (
 		<div className="AppHeader" {...rest}>
-			<div className="title">
-				{title}
-			</div>
-			<div className="title2">
-				{title2}
-			</div>
+			<Nav.Link className="title" href='/Association'>{title}</Nav.Link>
+			<Nav.Link className="title2" href='/'>{title2}</Nav.Link>
 			<div className="title3">
 				{title3}
 			</div>
