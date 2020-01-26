@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
-.AppHeader {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('pictures/header.gif');
+.AppFooter {
+	background: rgb(125, 132, 119);
 	background-size: cover;
 	width: 100%;
 	background-position: center center;
@@ -9,7 +9,7 @@
 	z-index: 1;
 	position: relative;
 }
-.AppHeader .subtitle {
+.AppHeader .contributor1 .contributor2 .contributor3 {
 	text-align: center;
 	color: white;
 	font-size: 23px;
